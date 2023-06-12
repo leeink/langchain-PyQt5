@@ -1,8 +1,19 @@
 # PyQt5 - LangChain
 ## Documents summary
 
-**PyQt5와 LangChain의 요약 모델을 활용하여 만든 문서 요약 프로그램**
+**PyQt5와 LangChain의 요약 모델을 활용하여 만든 문서 요약 프로그램 \n**
+**Python >= 3.10.8 \n**
+**라이브러리는 requirements.txt 참조 \n**
+`pip install requiremetns.txt`
+
 <hr/>
+
+* PdfFolders: Pdf파일들이 존재하는 폴더
+* PyQt: PyQt 클라이언트 프로그램 존재하는 프로그램.
+  - llms.py: LangChain을 사용하여 모델 객체를 담고 있는 파일
+  - main.py: 클라이언트 프로그램
+  - pj.ui: QtDesigner프로그램을 사용하여 만든 UI파일
+
 
 - 다음과 같은 섹션으로 나뉨
 * txt
