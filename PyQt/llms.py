@@ -1,8 +1,8 @@
 import os
 import glob
 
-os.environ['OPENAI_API_KEY']='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' # 동근
-#os.environ['OPENAI_API_KEY']='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'
+os.environ['OPENAI_API_KEY']='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'
+
 from langchain import OpenAI, PromptTemplate, LLMChain
 from langchain.text_splitter import CharacterTextSplitter
 from langchain.chains.mapreduce import MapReduceChain
