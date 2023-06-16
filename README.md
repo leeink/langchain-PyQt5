@@ -19,10 +19,7 @@
   - txt 문서를 요약할 수 있는 섹션이다.
   - Raw File 필드에 txt 문서 원본이 표시된다.
   - summary 버튼을 누르면 요약이 실행된다.
-  - Summarized 필드에 txt 문서가 요약된 내용이 표시된다. <br/>
-
-![txtSummary](assets/0tab.png)
-![txtSummaryDone](assets/0tab done.png)
+  - Summarized 필드에 txt 문서가 요약된 내용이 표시된다.
 
 * pdf
   - pdf 문서를 요약할 수 있는 섹션이다.
