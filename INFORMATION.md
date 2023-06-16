@@ -23,5 +23,5 @@
 
 ## 어떻게 사용하나??
 
-![txtTab](assets/0tab.png){: width="100" height="100"}
-![txtTab](assets/0tab done.png){: width="100" height="100"}
+![txtTab](assets/0tab.png){: width="50" height="50"}
+![txt](assets/0tab done.png){: width="50" height="50"}
