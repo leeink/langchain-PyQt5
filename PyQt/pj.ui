@@ -24,7 +24,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>3</number>
+     <number>4</number>
     </property>
     <widget class="QWidget" name="tab">
      <attribute name="title">
@@ -461,6 +461,73 @@ p, li { white-space: pre-wrap; }
       </property>
       <property name="text">
        <string>Query Enter</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_5">
+     <attribute name="title">
+      <string>code summary</string>
+     </attribute>
+     <widget class="QTextEdit" name="codeInputField">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>70</y>
+        <width>321</width>
+        <height>341</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_8">
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>40</y>
+        <width>31</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Code</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="CodeSummarizedField">
+      <property name="geometry">
+       <rect>
+        <x>410</x>
+        <y>70</y>
+        <width>331</width>
+        <height>341</height>
+       </rect>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_9">
+      <property name="geometry">
+       <rect>
+        <x>540</x>
+        <y>40</y>
+        <width>71</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Summaized</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="Summary4">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>510</y>
+        <width>141</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Summary </string>
       </property>
      </widget>
     </widget>

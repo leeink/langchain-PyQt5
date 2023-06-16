@@ -4,7 +4,7 @@
 **PyQt5와 LangChain의 요약 모델을 활용하여 만든 문서 요약 프로그램** <br/>
 **Python >= 3.10.8** <br/>
 **라이브러리는 requirements.txt 참조**<br/>
-`pip install requiremetns.txt`
+`pip install -r requiremetns.txt`
 
 <hr/>
 
@@ -19,7 +19,11 @@
   - txt 문서를 요약할 수 있는 섹션이다.
   - Raw File 필드에 txt 문서 원본이 표시된다.
   - summary 버튼을 누르면 요약이 실행된다.
-  - Summarized 필드에 txt 문서가 요약된 내용이 표시된다.
+  - Summarized 필드에 txt 문서가 요약된 내용이 표시된다. <br/>
+
+![txtSummary](assets/0tab.png)
+![txtSummaryDone](assets/0tab done.png)
+
 * pdf
   - pdf 문서를 요약할 수 있는 섹션이다.
   - summary 버튼을 누르면 요약이 실행된다.

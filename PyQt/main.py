@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'C:\Practice\Personal\Python venvs\llmBackend\PyQt\pj.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.9
 #
@@ -18,7 +17,8 @@ class Ui_MainWindow(QWidget):
     def __init__(self):
         super().__init__()
         self.setupUi(MainWindow)
-        self.summarizer = summarizer()
+        self.summarizer = summarizer()  # 요약기 객체 생성
+
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(800, 608)
@@ -161,6 +161,28 @@ class Ui_MainWindow(QWidget):
         self.QueryButton.setObjectName("QueryButton")
         self.QueryButton.clicked.connect(self.pdfQuery)
         self.QTabsWidget.addTab(self.tab_4, "")
+        self.tab_5 = QtWidgets.QWidget()
+        self.tab_5.setObjectName("tab_5")
+        self.codeInputField = QtWidgets.QTextEdit(self.tab_5)
+        self.codeInputField.setGeometry(QtCore.QRect(40, 70, 321, 341))
+        self.codeInputField.setObjectName("codeInputField")
+        self.codeInputField.setTabStopDistance(QtGui.QFontMetricsF(     # 코드를 직접 작성하기 편하게 탭 간격 조정
+            self.codeInputField.font()).horizontalAdvance(' ') * 4)
+        self.label_8 = QtWidgets.QLabel(self.tab_5)
+        self.label_8.setGeometry(QtCore.QRect(180, 40, 31, 20))
+        self.label_8.setObjectName("label_8")
+        self.CodeSummarizedField = QtWidgets.QTextEdit(self.tab_5)
+        self.CodeSummarizedField.setGeometry(QtCore.QRect(410, 70, 331, 341))
+        self.CodeSummarizedField.setReadOnly(True)
+        self.CodeSummarizedField.setObjectName("CodeSummarizedField")
+        self.label_9 = QtWidgets.QLabel(self.tab_5)
+        self.label_9.setGeometry(QtCore.QRect(540, 40, 71, 16))
+        self.label_9.setObjectName("label_9")
+        self.Summary4 = QtWidgets.QPushButton(self.tab_5)
+        self.Summary4.setGeometry(QtCore.QRect(320, 510, 141, 23))
+        self.Summary4.setObjectName("Summary4")
+        self.Summary4.clicked.connect(self.summaryCode)
+        self.QTabsWidget.addTab(self.tab_5, "")
         MainWindow.setCentralWidget(self.centralwidget)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
         self.statusbar.setObjectName("statusbar")
@@ -172,7 +194,7 @@ class Ui_MainWindow(QWidget):
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "LLM Summarizer"))
         self.Summary1.setText(_translate("MainWindow", "Summary"))
         self.SummarizedTxtField.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
@@ -207,7 +229,7 @@ class Ui_MainWindow(QWidget):
         self.OpenFolder3.setText(_translate("MainWindow", "Open Folder"))
         self.Summary3.setText(_translate("MainWindow", "Summary"))
         self.QTabsWidget.setTabText(self.QTabsWidget.indexOf(self.tab_3), _translate("MainWindow", "pdfs"))
-        self.label_6.setText(_translate("MainWindow", "Multiple PDF Document Query"))
+        self.label_6.setText(_translate("MainWindow", "Summary Multiple PDF Document"))
         self.PdfQueryAnswerField.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
@@ -222,11 +244,16 @@ class Ui_MainWindow(QWidget):
         self.label_7.setText(_translate("MainWindow", "Query"))
         self.QueryButton.setText(_translate("MainWindow", "Query Enter"))
         self.QTabsWidget.setTabText(self.QTabsWidget.indexOf(self.tab_4), _translate("MainWindow", "pdfs query"))
+        self.label_8.setText(_translate("MainWindow", "Code"))
+        self.label_9.setText(_translate("MainWindow", "Summaized"))
+        self.Summary4.setText(_translate("MainWindow", "Summary "))
+        self.QTabsWidget.setTabText(self.QTabsWidget.indexOf(self.tab_5), _translate("MainWindow", "code summary"))
 
-
-    #callback function for PushButton
+    # Callback Functions
 
     ## Open File or Folder
+
+    # txt파일 열기 함수
     def openFile(self) -> None:
         fname=QFileDialog.getOpenFileName(self)
         self.lineEdit.setText(fname[0])
@@ -235,30 +262,37 @@ class Ui_MainWindow(QWidget):
             data=f.read()
             self.RawFIleField.setText(data)
 
+    # pdf파일 열기 함수
     def openFile2(self) -> None:
         fname=QFileDialog.getOpenFileName(self)
         self.lineEdit_2.setText(fname[0])
         f=open(fname[0],'r',encoding='UTF-8')
 
+    # pdf 폴더 열기 함수
     def openFolder3(self) -> None:
         fname=QFileDialog.getExistingDirectory(self,"Select Directory")
         self.lineEdit_3.setText(fname)
-        
+    
+    # pdf 폴더 열기 함수
     def openFolder4(self) -> None:
         fname=QFileDialog.getExistingDirectory(self,"Select Directory")
         self.lineEdit_4.setText(fname)
 
     ## File Summary
+
+    # txt파일 요약 함수
     def summaryDoc(self) -> None:
         text = self.RawFIleField.toPlainText()
         res = self.summarizer.summary(text)
         self.SummarizedTxtField.setText(res)
 
+    # pdf파일 요약 함수
     def summaryPdf(self) -> None:
         path = self.lineEdit_2.text()
         res = self.summarizer.summaryPdf(path)
         self.SummarizedPdfField.setText(res[0])
 
+    # 여러 개의 pdf 요약 함수
     def summaryMPdf(self) -> None:
         summary = ""
         path = self.lineEdit_3.text()
@@ -268,13 +302,26 @@ class Ui_MainWindow(QWidget):
         self.SummarizedMPdfField.setText(summary)
 
     ## Query
+
+    # pdf파일 내용 질문 함수
     def pdfQuery(self) -> None:
         query = self.QueryInputField.toPlainText()
         path = self.lineEdit_4.text()
         res = self.summarizer.QueryPdfs_fromFolder(path, query)
         self.PdfQueryAnswerField.setText(res)
 
-# Main Structure
+    ## Code Summary
+
+    # 코드의 작업을 요약하고 요약을 주석 형태로 출력해주는 함수
+    def summaryCode(self, code) -> None:
+        code = self.codeInputField.toPlainText()
+        query = "Explain what the code does."
+        res =f" \"\"\" {self.summarizer.summarize_code(code, query)} \n\"\"\" \n"
+        self.CodeSummarizedField.setText(res)
+        self.CodeSummarizedField.append(code)
+
+    
+
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
@@ -283,3 +330,5 @@ if __name__ == "__main__":
     ui.setupUi(MainWindow)
     MainWindow.show()
     sys.exit(app.exec_())
+
+
