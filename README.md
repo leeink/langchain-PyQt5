@@ -1,4 +1,5 @@
 # PyQt5 - LangChain
+## 2018218042 이동근
 ## Documents summary
 
 **PyQt5와 LangChain의 요약 모델을 활용하여 만든 문서 요약 프로그램** <br/>

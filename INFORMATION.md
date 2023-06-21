@@ -20,6 +20,8 @@
     - generative_result_reduce_chain : 코드가 하는 작업을 설명한 code_description을 생성해 내는 체인
     - combine_documents : 위 작업들을 하나로 합친 체인
     - map_reduce : 완성된 맵 리듀스 체인
+    
+    - llm: 위 프롬프트 엔지니어링 거쳐서 만들어진 txt, pdf, python 파일 문서 요약기
 
 ## 어떻게 사용하나??
 
