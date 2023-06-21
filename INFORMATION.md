@@ -46,5 +46,5 @@
 * code 요약 전, 후
     - code 필드에 code를 직접 작성하거나 copy & paste 하고 summary 버튼을 누르면 요약 실행
     - openfile을 누른 후 python 파일을 선택하고 summary 버튼을 누르면 요약 실행
-    <img src = "assets/4tab.png" width = "500" height="500">
-    <img src = "assets/4tab done.png" width = "500" height="500">
+    <img src = "assets/4tab1.png" width = "500" height="500">
+    <img src = "assets/4tab done1.png" width = "500" height="500">
