@@ -23,5 +23,22 @@
 
 ## 어떻게 사용하나??
 
-<img src = "assets/0tab.png" width = "200" height="200">
-<img src = "assets/0tab done.png" width = "200" height="200">
+* txt 문서 요약 전, 후
+<img src = "assets/0tab.png" width = "500" height="500">
+<img src = "assets/0tab done.png" width = "500" height="500">
+
+* pdf 문서 요약 전, 후
+<img src = "assets/0tab.png" width = "500" height="500">
+<img src = "assets/0tab done.png" width = "500" height="500">
+
+* pdf 문서 여러 개 요약 전, 후
+<img src = "assets/0tab.png" width = "500" height="500">
+<img src = "assets/0tab done.png" width = "500" height="500">
+
+* pdf 문서 쿼리 전, 후
+<img src = "assets/0tab.png" width = "500" height="500">
+<img src = "assets/0tab done.png" width = "500" height="500">
+
+* code 요약 전, 후
+<img src = "assets/0tab.png" width = "500" height="500">
+<img src = "assets/0tab done.png" width = "500" height="500">
