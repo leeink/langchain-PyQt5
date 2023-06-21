@@ -25,26 +25,26 @@
 
 * txt 문서 요약 전, 후
     - openfile을 누른 후 txt파일을 선택하고 summary 버튼을 누르면 요약 실행
-    <img src = "assets/0tab.png" width = "500" height="500">
-    <img src = "assets/0tab done.png" width = "500" height="500">
+    <img src = "assets/0tab.png" width = "700" height="500">
+    <img src = "assets/0tab done.png" width = "700" height="500">
 
 * pdf 문서 요약 전, 후
     - openfile을 누른 후 pdf파일을 선택하고 summary 버튼을 누르면 요약 실행
-    <img src = "assets/1tab.png" width = "500" height="500">
-    <img src = "assets/1tab done.png" width = "500" height="500">
+    <img src = "assets/1tab.png" width = "700" height="500">
+    <img src = "assets/1tab done.png" width = "700" height="500">
 
 * pdf 문서 여러 개 요약 전, 후
     - openfolder를 누른 후 pdf파일이 있는 폴더를 선택하고 summary 버튼을 누르면 요약 실행
-    <img src = "assets/2tab.png" width = "500" height="500">
-    <img src = "assets/2tab done.png" width = "500" height="500">
+    <img src = "assets/2tab.png" width = "700" height="500">
+    <img src = "assets/2tab done.png" width = "700" height="500">
 
 * pdf 문서 쿼리 전, 후
     - openfolder를 누른 후 pdf파일이 있는 폴더를 선택하고 query필드에 질문을 쓰고 query enter 버튼을 누르면 요약 실행
-    <img src = "assets/3tab.png" width = "500" height="500">
-    <img src = "assets/3tab done.png" width = "500" height="500">
+    <img src = "assets/3tab.png" width = "700" height="500">
+    <img src = "assets/3tab done.png" width = "700" height="500">
 
 * code 요약 전, 후
     - code 필드에 code를 직접 작성하거나 copy & paste 하고 summary 버튼을 누르면 요약 실행
     - openfile을 누른 후 python 파일을 선택하고 summary 버튼을 누르면 요약 실행
-    <img src = "assets/4tab1.png" width = "500" height="500">
-    <img src = "assets/4tab done1.png" width = "500" height="500">
+    <img src = "assets/4tab1.png" width = "700" height="500">
+    <img src = "assets/4tab done1.png" width = "700" height="500">
