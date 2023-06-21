@@ -3,7 +3,7 @@
 ## Documents summary
 
 **PyQt5와 LangChain의 요약 모델을 활용하여 만든 문서 요약 프로그램** <br/>
-**Python >= 3.10.8** <br/>
+**Python == 3.10.8** <br/>
 **라이브러리는 requirements.txt 참조**<br/>
 `pip install -r requiremetns.txt`
 
