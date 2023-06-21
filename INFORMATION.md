@@ -11,7 +11,7 @@
 
 ## 어떻게 만들었나
 
-* [LangChain](https://python.langchain.com/en/latest/modules/chains/index_examples/summarize.html)
+* [LangChain](https://python.langchain.com/docs/modules/chains/popular/summarize.html)
 * 해당 링크를 참조하여 만들었다.
     - map_template : 주어진 파이썬 코드를 요약하기 위한 프롬프트 엔지니어링 탬플릿
     - reduce_template: map_template대로 만들어진 요약을 출력하는 서식을 정하기 위한 프롬프트 엔지니어링 탬플릿
