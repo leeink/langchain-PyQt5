@@ -23,5 +23,5 @@
 
 ## 어떻게 사용하나??
 
-<img src = "assets/0tab.png" width = "50" height="50">
-<img src = "assets/0tab done.png" width = "50" height="50">
+<img src = "assets/0tab.png" width = "200" height="200">
+<img src = "assets/0tab done.png" width = "200" height="200">
