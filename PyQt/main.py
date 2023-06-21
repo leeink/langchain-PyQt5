@@ -178,6 +178,15 @@ class Ui_MainWindow(QWidget):
         self.label_9 = QtWidgets.QLabel(self.tab_5)
         self.label_9.setGeometry(QtCore.QRect(540, 40, 71, 16))
         self.label_9.setObjectName("label_9")
+        self.lineEdit_5 = QtWidgets.QLineEdit(self.tab_5)
+        self.lineEdit_5.setEnabled(True)
+        self.lineEdit_5.setGeometry(QtCore.QRect(230, 480, 319, 20))
+        self.lineEdit_5.setReadOnly(True)
+        self.lineEdit_5.setObjectName("lineEdit_5")
+        self.OpenFile5 = QtWidgets.QPushButton(self.tab_5)
+        self.OpenFile5.setGeometry(QtCore.QRect(560, 480, 75, 23))
+        self.OpenFile5.setObjectName("OpenFile5")
+        self.OpenFile5.clicked.connect(self.openFile5)
         self.Summary4 = QtWidgets.QPushButton(self.tab_5)
         self.Summary4.setGeometry(QtCore.QRect(320, 510, 141, 23))
         self.Summary4.setObjectName("Summary4")
@@ -246,6 +255,7 @@ class Ui_MainWindow(QWidget):
         self.QTabsWidget.setTabText(self.QTabsWidget.indexOf(self.tab_4), _translate("MainWindow", "pdfs query"))
         self.label_8.setText(_translate("MainWindow", "Code"))
         self.label_9.setText(_translate("MainWindow", "Summaized"))
+        self.OpenFile5.setText(_translate("MainWindow","Open File"))
         self.Summary4.setText(_translate("MainWindow", "Summary "))
         self.QTabsWidget.setTabText(self.QTabsWidget.indexOf(self.tab_5), _translate("MainWindow", "code summary"))
 
@@ -255,28 +265,47 @@ class Ui_MainWindow(QWidget):
 
     # txt파일 열기 함수
     def openFile(self) -> None:
-        fname=QFileDialog.getOpenFileName(self)
-        self.lineEdit.setText(fname[0])
-        f=open(fname[0],'r',encoding='UTF-8')
-        with f:
-            data=f.read()
-            self.RawFIleField.setText(data)
+        try:
+            fname=QFileDialog.getOpenFileName(self,'Open File','./','Text files (*.txt)')
+            self.lineEdit.setText(fname[0])
+            f=open(fname[0],'r',encoding='UTF-8')
+            with f:
+                data=f.read()
+                self.RawFIleField.setText(data)
+        except FileNotFoundError as f:
+            pass
 
     # pdf파일 열기 함수
     def openFile2(self) -> None:
-        fname=QFileDialog.getOpenFileName(self)
-        self.lineEdit_2.setText(fname[0])
-        f=open(fname[0],'r',encoding='UTF-8')
+        try:    
+            fname=QFileDialog.getOpenFileName(self,'Open File','./','PDF files (*.pdf)')
+            self.lineEdit_2.setText(fname[0])
+            f=open(fname[0],'r',encoding='UTF-8')
+        except FileNotFoundError as f:
+            pass
 
     # pdf 폴더 열기 함수
     def openFolder3(self) -> None:
-        fname=QFileDialog.getExistingDirectory(self,"Select Directory")
+        fname=QFileDialog.getExistingDirectory(self,"Select Directory",'./')
         self.lineEdit_3.setText(fname)
     
     # pdf 폴더 열기 함수
     def openFolder4(self) -> None:
-        fname=QFileDialog.getExistingDirectory(self,"Select Directory")
+        fname=QFileDialog.getExistingDirectory(self,"Select Directory",'./')
         self.lineEdit_4.setText(fname)
+
+    # python 파일 열기 함수
+    def openFile5(self) -> None:
+        try:
+            fname=QFileDialog.getOpenFileName(self,'Open File','./','Python files (*.py)')
+            f=open(fname[0],'r',encoding='UTF-8')
+            with f:
+                data=f.read()
+                self.codeInputField.setText(data)
+            self.lineEdit_5.setText(fname[0])
+            
+        except FileNotFoundError as f:
+            pass
 
     ## File Summary
 
