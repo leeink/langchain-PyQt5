@@ -8,12 +8,13 @@
 
 <hr/>
 
-* PdfFolders: Pdf파일들이 존재하는 폴더
 * PyQt: PyQt 클라이언트 프로그램 존재하는 프로그램.
   - llms.py: LangChain을 사용하여 모델 객체를 담고 있는 파일
   - main.py: 클라이언트 프로그램
   - pj.ui: QtDesigner프로그램을 사용하여 만든 UI파일
-* memo.txt : txt문서 요약용 샘플
+* memo.txt : 샘플 txt문서
+* PdfFolders: 샘플 Pdf파일들이 존재하는 폴더
+* quickSort : 샘픔 python 파일
 
 - 다음과 같은 섹션으로 나뉨
 * txt
